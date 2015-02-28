@@ -3,7 +3,6 @@
 <window>
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
-    <onload>Skin.SetBool(videomodes.mediabrowser)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -18,6 +17,7 @@
             <onfocus condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)">RunScript(script.tv.show.next.aired,silent=True)</onfocus>
             <onfocus condition="!Player.HasVideo + !IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(Home)</onfocus>
             <onfocus condition="IsEmpty(Skin.String(StartupPlaylist))">AlarmClock(GoHome,ReplaceWindow(home),00:01,silent,false)</onfocus>
+            <onfocus condition="System.HasAddon(plugin.video.xbmb3c)">Skin.SetBool(videomodes.mediabrowser)</onfocus>
         </control>
         <control type="label">
             <description>Loading</description>
