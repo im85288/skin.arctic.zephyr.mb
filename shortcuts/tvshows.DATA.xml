@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<label>369</label>
+		<label2>20343</label2>
+		<defaultID>369</defaultID>
+		<icon>special://skin/extras/icons/tv.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<label>20387</label>
+		<label2>20343</label2>
+		<defaultID>20387</defaultID>
+		<icon>special://skin/extras/icons/recentlyadded.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action>
+		<visible>!Skin.HasSetting(HomeMenuUsePlexforTVseries)</visible>
+	</shortcut>
+	<shortcut>
+		<label>626</label>
+		<label2>20343</label2>
+		<defaultID>626</defaultID>
+		<icon>special://skin/extras/icons/recentlyadded.png</icon>
+		<thumb />
+		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.resume.path)]</action>
+	</shortcut>
+	<shortcut>
+		<label>135</label>
+		<label2>20343</label2>
+		<defaultID>135</defaultID>
+		<icon>special://skin/extras/icons/genre.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/genres/,return)</action>
+	</shortcut>
+	<shortcut>
+		<label>Favourite Series</label>
+		<label2>20343</label2>
+		<defaultID>135</defaultID>
+		<icon>special://skin/extras/icons/favourites.png</icon>
+		<thumb />
+		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteseries.path)]</action>
+	</shortcut>
+	<shortcut>
+		<label>Favourite Episodes</label>
+		<label2>20343</label2>
+		<defaultID>135</defaultID>
+		<icon>special://skin/extras/icons/favourites.png</icon>
+		<thumb />
+		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteepisodes.path)]</action>
+	</shortcut>
+</shortcuts>

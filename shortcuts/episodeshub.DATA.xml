@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>20343</label>
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.all.path)]</action>
+        <icon>special://skin/extras/icons/tv.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>31173</label>
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.latest.path)]</action>
+        <icon>special://skin/extras/icons/recentlyadded.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>Next Up</label>
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.nextup.path)]</action>
+        <icon>special://skin/extras/icons/recent.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>31175</label>
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.random.path)]</action>
+        <icon>special://skin/extras/icons/signpost.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>137</label>
+        <action>RunScript(plugin.video.xbmb3c,-1,mode=18)</action>
+        <icon>special://skin/extras/icons/search.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>135</label>            
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.genres.path)]</action>
+        <icon>special://skin/extras/icons/genre.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>20388</label>            
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.9.path)]</action>
+        <icon>special://skin/extras/icons/director.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>Favourite Series</label>            
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteseries.path)]</action>
+        <icon>special://skin/extras/icons/genre.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>Favourite Episodes</label>            
+        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteepisodes.path)]</action>
+        <icon>special://skin/extras/icons/genre.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>136</label>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.playlists.0.path)]</action>
+        <icon>special://skin/extras/icons/playlist.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>1214</label>
+        <action>ActivateWindow(Videos,Files,return)</action>
+        <icon>special://skin/extras/icons/files.png</icon>
+    </shortcut>
+    <shortcut>
+        <label2>Episode Hub Shortcut</label2>
+        <label>24001</label>
+        <action>ActivateWindow(videos,addons://sources/video/,return)</action>
+        <icon>special://skin/extras/icons/video-addons.png</icon>
+    </shortcut>
+
+</shortcuts>
