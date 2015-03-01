@@ -106,6 +106,8 @@
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart)) + Skin.HasSetting(home.showweatherfanart) + [IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating]">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating">pvr/background.jpg</value>
+        <value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt)) + !Control.IsVisible(51)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+		
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
         <value condition="!IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
@@ -126,6 +128,7 @@
             <visible>Skin.HasSetting(global.showvideo)</visible>
             <include>Dimensions_Fullscreen</include>
         </control>
+       
     </include>
     <include name="GlobalVisualisation">
         <control type="group">

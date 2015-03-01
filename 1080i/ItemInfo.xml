@@ -219,8 +219,8 @@
 					<font>Small</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>BBFFFFFF</textcolor>
-					<selectedcolor>BBFFFFFF</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
@@ -261,8 +261,8 @@
 					<font>Small</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>BBFFFFFF</textcolor>
-					<selectedcolor>BBFFFFFF</selectedcolor>
+					<textcolor>Light1</textcolor>
+					<selectedcolor>Light1</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</focusedlayout>
@@ -336,8 +336,8 @@
 					<font>Mini</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>BBFFFFFF</textcolor>
-					<selectedcolor>BBFFFFFF</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
@@ -386,9 +386,23 @@
 					<font>Mini</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>BBFFFFFF</textcolor>
-					<selectedcolor>AAFFFFFF</selectedcolor>
+					<textcolor>Light1</textcolor>
+					<selectedcolor>Light1</selectedcolor>
 					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(3230)</visible>
+				</control>
+				<control type="label">
+					<left>85</left>
+					<top>30</top>
+					<width>255</width>
+					<height>30</height>
+					<font>Mini</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(3230)</visible>
 				</control>
 			</focusedlayout>
 		</control>
@@ -428,7 +442,7 @@
 		</control>
 		<!-- trailer button -->
 		<control type="button" id="3102">
-			<left>685</left>
+			<left>675</left>
 			<top>440</top>
 			<width>51</width>
 			<height>51</height>
@@ -447,7 +461,7 @@
 		</control>
 		<!-- couchpotato button -->
 		<control type="button" id="3103">
-			<left>685</left>
+			<left>675</left>
 			<top>440</top>
 			<width>51</width>
 			<height>51</height>
@@ -473,7 +487,7 @@
 			<onright>3193</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>
-			<left>765</left>
+			<left>755</left>
 			<top>445</top>
 			<texturefocus>noop</texturefocus>
 			<texturenofocus>noop</texturenofocus>
@@ -500,7 +514,7 @@
 			<onright>3194</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>
-			<left>825</left>
+			<left>815</left>
 			<top>445</top>
 			<width>47</width>
 			<height>47</height>
@@ -527,7 +541,7 @@
 			<onright>3195</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>
-			<left>885</left>
+			<left>875</left>
 			<top>445</top>
 			<width>47</width>
 			<height>47</height>
@@ -551,11 +565,11 @@
 		<control type="radiobutton" id="3195">
 			<radioposx>0</radioposx>
 			<onleft>3194</onleft>
-			<onright>3230</onright>
+			<onright>3456</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>
-			<left>950</left>
-			<top>445</top>
+			<left>940</left>
+			<top>447</top>
 			<width>47</width>
 			<height>47</height>
 			<radiowidth>47</radiowidth>
@@ -574,10 +588,39 @@
 			<textureradioofffocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/heart_off.png</textureradioofffocus>
 			<textureradiooffnofocus>special://skin/extras/icons/heart_off.png</textureradiooffnofocus>
 		</control>
+		<!-- Extra Info -->
+		<control type="button" id="3456">
+			<left>975</left>
+			<top>420</top>
+			<width>100</width>
+			<height>100</height>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>font13</font>
+			<onleft>3195</onleft>
+			<onright>3230</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<texturefocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/info.png</texturefocus>
+			<texturenofocus colordiffuse="White">special://skin/extras/icons/info.png</texturenofocus>
+			<textcolor>White</textcolor>
+			<focusedcolor>Highlight</focusedcolor>
+			<onclick>SetProperty(ExtDirector,$INFO[Container(3291).ListItem(0).Label2],home)</onclick>
+			<onclick>SetProperty(ExtWriter,$INFO[Container(3291).ListItem(1).Label2],home)</onclick>
+			<onclick>SetProperty(ExtMovie,$INFO[Control.GetLabel(3000)],home)</onclick>
+			<onclick>SetProperty(ExtStudio,$VAR[StudioInfo],home)</onclick>
+			<onclick>SetProperty(ExtID,$VAR[IDInfo],home)</onclick>
+			<onclick condition="stringcompare(Window(10025).Property(ItemType),Movie)">ActivateWindow(3203)</onclick>
+			<onclick condition="stringcompare(Window(10025).Property(ItemType),Episode)">ActivateWindow(3204)</onclick>
+			<onclick condition="stringcompare(Window(10025).Property(ItemType),Season)">ActivateWindow(3204)</onclick>
+			<onclick condition="stringcompare(Window(10025).Property(ItemType),Series)">ActivateWindow(3204)</onclick>
+			<visible>stringcompare(Window(10025).Property(ItemType),Movie)</visible>
+			<onclick>Close</onclick>
+		</control>
 		<!-- ratings -->
 		<control type="group">
-			<left>1033</left>
-			<top>440</top>
+			<left>1063</left>
+			<top>443</top>
 			<align>right</align>
 			<control type="image">
 				<left>125</left>
@@ -595,6 +638,14 @@
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<texture border="4" diffuse="special://skin/extras/case_diffuse_full.png" background="true" colordiffuse="$VAR[CommunityRatingInfo]">special://skin/extras/backgrounds/white.png</texture>
 				<visible>StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !substring(Container(3226).ListItem(7).Label2,None)</visible>
+			</control>
+			<control type="image">
+				<top>4</top>
+				<width>50</width>
+				<height>46</height>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<texture border="4" diffuse="special://skin/extras/case_diffuse_full.png" background="true" colordiffuse="$VAR[CommunityRatingInfo]">special://skin/extras/backgrounds/white.png</texture>
+				<visible>StringCompare(Container(3226).ListItem(8).Label,Metascore:) + !substring(Container(3226).ListItem(8).Label2,None)</visible>
 			</control>
 			<control type="label">
 				<top>-5</top>
@@ -617,10 +668,20 @@
 				<align>center</align>
 				<visible>StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !substring(Container(3226).ListItem(7).Label2,None)</visible>
 			</control>
+			<control type="label">
+				<top>-5</top>
+				<width>50</width>
+				<font>SmallBold</font>
+				<label>$INFO[Container(3226).ListItem(8).Label2]</label>
+				<textcolor>White</textcolor>
+				<scroll>false</scroll>
+				<align>center</align>
+				<visible>StringCompare(Container(3226).ListItem(8).Label,Metascore:) + !substring(Container(3226).ListItem(8).Label2,None)</visible>
+			</control>
 		</control>
 		<control type="group">
-			<left>1105</left>
-			<top>440</top>
+			<left>1125</left>
+			<top>443</top>
 			<align>right</align>
 			<control type="image">
 				<width>50</width>
@@ -641,8 +702,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>1220</left>
-			<top>440</top>
+			<left>1240</left>
+			<top>443</top>
 			<align>right</align>
 			<control type="image">
 				<width>50</width>
@@ -653,7 +714,7 @@
 			</control>
 			<control type="label">
 				<top>-5</top>
-				<left>55</left>
+				<left>49</left>
 				<width>90</width>
 				<font>Font-Condensed-S32</font>
 				<label>$INFO[Container(3226).ListItem(1).Label2]</label>

@@ -274,6 +274,7 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<onclick>$INFO[Window(home).Property("MB3.Action")]</onclick>
 				</control>
 				<control type="button" id="9">
 					<description>Resume</description>
@@ -293,6 +294,32 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<onclick>$INFO[Window(home).Property("MB3.TrailerAction")]</onclick>
+					<visible>!IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)</visible>
+				</control>
+				<control type="button" id="11">
+					<description>Trailer button</description>
+					<label>20410</label>
+					<width>450</width>
+					<height>68</height>
+					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+					<include>DefDialogButtons</include>
+					<onclick>Dialog.Close(movieinformation)</onclick>
+					<onclick>ActivateWindow(videos,$INFO[ListItem.Label,plugin://plugin.video.youtube/kodion/search/query/?q=, trailer],return)</onclick>
+					<visible>IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)</visible>
+				</control>
+				<control type="button" id="11">
+					<description>Trailer button</description>
+					<label>20410</label>
+					<width>450</width>
+					<height>68</height>
+					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+					<include>DefDialogButtons</include>
+					<onclick>Dialog.Close(movieinformation)</onclick>
+					<onclick>ActivateWindow(videos,$INFO[ListItem.Title,plugin://plugin.video.youtube/kodion/search/query/?q=, trailer],return)</onclick>
+					<visible>!stringcompare(ListItem.Property(ItemType),Movie)</visible>
 				</control>
 				<control type="button" id="49">
 					<description>Home Theatre</description>
@@ -359,7 +386,14 @@
 				<label>$INFO[ListItem.Director,$LOCALIZE[31191] ,]</label>
 				<align>left</align>
 				<onleft>9000</onleft>
-				<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Director])</onclick>
+				<!-- <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Director])</onclick> -->
+				<onclick>SetProperty(ExtDirector,$INFO[ListItem.Director],home)</onclick>
+				<onclick>SetProperty(ExtWriter,$INFO[ListItem.Writer],home)</onclick>
+				<onclick>SetProperty(ExtMovie,$INFO[ListItem.Label],home)</onclick>
+				<onclick>SetProperty(ExtStudio,$INFO[ListItem.Studio],home)</onclick>
+				<onclick>SetProperty(ExtDBID,$INFO[ListItem.DBID],home)</onclick>
+				<onclick>ActivateWindow(3203)</onclick>
+				<onclick>Close</onclick>
 				<texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>
 				<texturefocus border="5" colordiffuse="Highlight">common/box.png</texturefocus>
 				<visible>!IsEmpty(ListItem.Director)</visible>

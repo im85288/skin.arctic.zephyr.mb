@@ -52,7 +52,7 @@
 			<width>340</width>
 			<height>60</height>
 			<label>MediaBrowser Search</label>
-			<font>Large</font>
+			<font>MediumBold</font>
 			<textcolor>Highlight</textcolor>
 			<visible>!IsEmpty(Control.GetLabel(3010))</visible>
 		</control>
