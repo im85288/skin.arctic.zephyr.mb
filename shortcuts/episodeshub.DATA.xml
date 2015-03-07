@@ -3,25 +3,25 @@
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>20343</label>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.all.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.0.path)]</action>
         <icon>special://skin/extras/icons/tv.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>31173</label>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.latest.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.1.path)]</action>
         <icon>special://skin/extras/icons/recentlyadded.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>Next Up</label>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.nextup.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.3.path)]</action>
         <icon>special://skin/extras/icons/recent.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>31175</label>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.random.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.11.path)]</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
     </shortcut>
     <shortcut>
@@ -33,7 +33,7 @@
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>135</label>            
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.genres.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.8.path)]</action>
         <icon>special://skin/extras/icons/genre.png</icon>
     </shortcut>
     <shortcut>
@@ -45,13 +45,13 @@
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>Favourite Series</label>            
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteseries.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.4.path)]</action>
         <icon>special://skin/extras/icons/genre.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>Favourite Episodes</label>            
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteepisodes.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.5.path)]</action>
         <icon>special://skin/extras/icons/genre.png</icon>
     </shortcut>
     <shortcut>

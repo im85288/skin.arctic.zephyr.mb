@@ -3,20 +3,20 @@
     <shortcut>
         <label2>Movie Hub Shortcut</label2>
         <label>20342</label>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.movies.all.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.movies.0.path)]</action>
         <icon>special://skin/extras/icons/film.png</icon>
     </shortcut>
     <shortcut>
         <label>31173</label>
         <label2>Movie Hub Shortcut</label2>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.movies.latest.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.movies.1.path)]</action>
         <icon>special://skin/extras/icons/recentlyadded.png</icon>
     </shortcut>
    
     <shortcut>
         <label>31175</label>
         <label2>Movie Hub Shortcut</label2>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.movies.random.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.movies.10.path)]</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
     </shortcut>
     <shortcut>
@@ -29,14 +29,14 @@
     <shortcut>
         <label>135</label>
         <label2>Movie Hub Shortcut</label2>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.movies.genres.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.movies.6.path)]</action>
         <icon>special://skin/extras/icons/genre.png</icon>
     </shortcut>
     
     <shortcut>
         <label>20434</label>
         <label2>Movie Hub Shortcut</label2>
-        <action>$INFO[Window(Home).Property(MediaBrowser.views.movies.collections.path)]</action>
+        <action>$INFO[Window(Home).Property(MediaBrowser.std.movies.4.path)]</action>
         <icon>special://skin/extras/icons/year.png</icon>
     </shortcut>
     <shortcut>

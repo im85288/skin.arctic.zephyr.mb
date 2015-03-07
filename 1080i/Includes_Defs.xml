@@ -25,12 +25,12 @@
 	<variable name="DefWidgetContent">
 		<!-- Individual Widget Paths -->
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Playlist)">$INFO[Container(300).ListItem.Property(widgetPlaylist)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecentEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecentMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomMovies)">$INFO[Window(Home).Property(MediaBrowser.std.movies.10.content)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomEpisodes)">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.11.content)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecentEpisodes)">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.1.content)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecentMovies)">$INFO[Window(Home).Property(MediaBrowser.std.movies.1.content)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecommendedEpisodes)">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.3.content)]</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecommendedMovies)">$INFO[Window(Home).Property(MediaBrowser.std.movies.2.content)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
@@ -48,13 +48,13 @@
 		<!-- Slideshow -->
 		<value condition="!IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Skin.String(home.slideshowpath)]</value>
 		<!-- Global Widget -->
-		<value condition="StringCompare(Window(home).Property(widget),RandomMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.movies.random.content)]</value>
-		<value condition="StringCompare(Window(home).Property(widget),RandomEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.tvshows.random.content)]</value>
-		<value condition="StringCompare(Window(home).Property(widget),RecentEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.tvshows.latest.content)]</value>
-		<value condition="StringCompare(Window(home).Property(widget),RecentMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.movies.latest.content)]</value>
-		<value condition="StringCompare(Window(home).Property(widget),RecommendedEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.tvshows.nextup.content)]</value>
-		<value condition="StringCompare(Window(home).Property(widget),RecommendedMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.movies.resume.content)]</value>
-		<value condition="IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.views.movies.random.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RandomMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.movies.10.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RandomEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.11.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RecentEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.1.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RecentMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.movies.1.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RecommendedEpisodes) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.3.content)]</value>
+		<value condition="StringCompare(Window(home).Property(widget),RecommendedMovies) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.movies.2.content)]</value>
+		<value condition="IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(MediaBrowser.std.movies.10.content)]</value>
 	</variable>
 	<include name="DefWidgetSelector">
 		<align>center</align>
@@ -74,15 +74,6 @@
 		<font>Button</font>
 		<textcolor>Black70</textcolor>
 		<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
-	</include>
-	<include name="DefPlayerPosterLeft203">
-		<left>203</left>
-	</include>
-	<include name="DefPlayerPosterLeft290">
-		<left>290</left>
-	</include>
-	<include name="DefPlayerPosterLeft0">
-		<left>0</left>
 	</include>
 	<include name="DefDialogInfoPanel">
 		<include>Animation.FadeIn.Slide</include>
@@ -425,11 +416,11 @@
 	</include>
 	<variable name="DefTVHubWidget">
 		<value condition="!IsEmpty(SKin.String(TVHubWidget))">$INFO[Skin.String(TVHubWidget)]</value>
-		<value>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.random.content)]</value>
+		<value>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.3.content)]</value>
 	</variable>
 	<variable name="DefMovieHubWidget">
 		<value condition="!IsEmpty(Skin.String(MovieHubWidget))">$INFO[Skin.String(MovieHubWidget)]</value>
-		<value>$INFO[Window(Home).Property(MediaBrowser.views.movies.random.content)]</value>
+		<value>$INFO[Window(Home).Property(MediaBrowser.std.movies.10.content)]</value>
 	</variable>
 	<variable name="MoviesButtonOnClick">
 		<value>$INFO[Window.Property(MediaBrowser.std.movies.0.path)]</value>
@@ -442,9 +433,16 @@
 		<value condition="stringcompare(Window(3203).Property(content),2)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;id=$INFO[Window(home).Property(ExtID)]</value>
 		<value>plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[Window(home).Property(ExtDirector)]</value>
 	</variable>
-	<variable name="DefDirectorTVWindowContent">
-		<value condition="stringcompare(Window(3204).Property(content),1)">plugin://script.extendedinfo?info=populartvshows</value>
-		<value condition="stringcompare(Window(3204).Property(content),2)">plugin://script.extendedinfo?info=similartvshowstrakt&amp;&amp;id=$INFO[Window(home).Property(ExtID)]</value>
-		<value>plugin://script.extendedinfo?info=topratedtvshows</value>
+	<variable name="DefMovieDBMoviesContent">
+		<value condition="stringcompare(Window(3204).Property(content),1)">plugin://script.extendedinfo?info=topratedmovies</value>
+		<value condition="stringcompare(Window(3204).Property(content),2)">plugin://script.extendedinfo?info=popularmovies</value>
+		<value condition="stringcompare(Window(3204).Property(content),3)">plugin://script.extendedinfo?info=upcoming</value>
+		<value>plugin://script.extendedinfo?info=incinemas</value>
+	</variable>
+	<variable name="DefMovieDBEpisodesContent">
+		<value condition="stringcompare(Window(3205).Property(content),1)">plugin://script.extendedinfo?info=topratedtvshows</value>
+		<value condition="stringcompare(Window(3205).Property(content),2)">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="stringcompare(Window(3205).Property(content),3)">plugin://script.extendedinfo?info=onairtvshows</value>
+		<value>plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
 </includes>

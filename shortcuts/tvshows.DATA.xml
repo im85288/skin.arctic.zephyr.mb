@@ -23,7 +23,7 @@
 		<defaultID>626</defaultID>
 		<icon>special://skin/extras/icons/recentlyadded.png</icon>
 		<thumb />
-		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.resume.path)]</action>
+		<action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.2.path)]</action>
 	</shortcut>
 	<shortcut>
 		<label>135</label>
@@ -39,7 +39,7 @@
 		<defaultID>135</defaultID>
 		<icon>special://skin/extras/icons/favourites.png</icon>
 		<thumb />
-		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteseries.path)]</action>
+		<action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.4.path)]</action>
 	</shortcut>
 	<shortcut>
 		<label>Favourite Episodes</label>
@@ -47,6 +47,6 @@
 		<defaultID>135</defaultID>
 		<icon>special://skin/extras/icons/favourites.png</icon>
 		<thumb />
-		<action>$INFO[Window(Home).Property(MediaBrowser.views.tvshows.favouriteepisodes.path)]</action>
+		<action>$INFO[Window(Home).Property(MediaBrowser.std.tvshows.5.path)]</action>
 	</shortcut>
 </shortcuts>

@@ -1,0 +1,12 @@
+﻿<views>
+	<view id="List" value="50" />
+	<view id="Big wide" value="51" />
+	<view id="Big list" value="52" />
+	<view id="Big icons" value="53" />
+	<view id="Wide" value="54" />
+	<view id="Icons" value="55" />
+	<view id="Media info" value="56" />
+	<view id="Extra Info" value="57" />
+	<view id="Carded" value="58" />
+	<view id="Thumbnail" value="500" />
+</views>

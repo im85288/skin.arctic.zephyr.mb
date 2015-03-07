@@ -50,7 +50,7 @@
 			<textcolor>Highlight</textcolor>
 		</control>
 		<!-- episode image season poster -->
-		<control type="image" id="3009">
+		<control type="image" id="3099">
 			<left>20</left>
 			<top>20</top>
 			<width>580</width>
@@ -611,9 +611,6 @@
 			<onclick>SetProperty(ExtStudio,$VAR[StudioInfo],home)</onclick>
 			<onclick>SetProperty(ExtID,$VAR[IDInfo],home)</onclick>
 			<onclick condition="stringcompare(Window(10025).Property(ItemType),Movie)">ActivateWindow(3203)</onclick>
-			<onclick condition="stringcompare(Window(10025).Property(ItemType),Episode)">ActivateWindow(3204)</onclick>
-			<onclick condition="stringcompare(Window(10025).Property(ItemType),Season)">ActivateWindow(3204)</onclick>
-			<onclick condition="stringcompare(Window(10025).Property(ItemType),Series)">ActivateWindow(3204)</onclick>
 			<visible>stringcompare(Window(10025).Property(ItemType),Movie)</visible>
 			<onclick>Close</onclick>
 		</control>

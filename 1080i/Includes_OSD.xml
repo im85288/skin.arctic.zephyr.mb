@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="OSDInfoContent">
+		<right>0</right>
+		<control type="label" description="Video Info">
+			<right>0</right>
+			<align>right</align>
+			<width>1000</width>
+			<top>0</top>
+			<height>40</height>
+			<font>Flag</font>
+			<textcolor>$VAR[OSDPanelWhite30]</textcolor>
+			<label>$INFO[VideoPlayer.AudioCodec,, • ]$VAR[LabelOSDAudioChannels,, • ]$INFO[VideoPlayer.VideoResolution,, • ]$INFO[VideoPlayer.VideoCodec,,]$INFO[VideoPlayer.RatingAndVotes, • ,]</label>
+		</control>
+		<control type="label" description="Title">
+			<width>1000</width>
+			<top>0</top>
+			<height>40</height>
+			<font>TinyBold</font>
+			<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+			<label>$VAR[PlayerTitle]</label>
+		</control>
+		<control type="label" description="Show">
+			<width>100%</width>
+			<top>50</top>
+			<height>40</height>
+			<font>MediumBold</font>
+			<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+			<label>$VAR[PlayerBigTitle]</label>
+		</control>
+		<control type="textbox" description="Plot">
+			<width>100%</width>
+			<top>105</top>
+			<height>68</height>
+			<font>Tiny</font>
+			<align>justify</align>
+			<textcolor>$VAR[OSDPanelWhite30]</textcolor>
+			<label>$VAR[PlayerPlotBox]</label>
+		</control>
+		<control type="label" description="Elapsed Time">
+			<width>400</width>
+			<bottom>30</bottom>
+			<height>40</height>
+			<font>Tiny</font>
+			<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+			<label>$VAR[PlayerStatus]</label>
+		</control>
+		<control type="label" description="Total Time">
+			<right>0</right>
+			<align>right</align>
+			<width>400</width>
+			<bottom>30</bottom>
+			<height>40</height>
+			<font>Tiny</font>
+			<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+			<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+		</control>
+		<control type="image">
+			<description>Progress Back</description>
+			<width>100%</width>
+			<bottom>10</bottom>
+			<height>8</height>
+			<texture colordiffuse="Black12">common/white.png</texture>
+			<visible>Skin.HasSetting(osd.usetheme)</visible>
+		</control>
+		<control type="progress" description="cache">
+			<description>Progress Bar</description>
+			<width>100%</width>
+			<bottom>10</bottom>
+			<height>8</height>
+			<info>Player.ProgressCache</info>
+			<visible>true</visible>
+			<texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+			<lefttexture colordiffuse="Highlight2">osd/progress-end.png</lefttexture>
+			<midtexture colordiffuse="Highlight2">osd/progress-end.png</midtexture>
+			<righttexture colordiffuse="Highlight2">osd/progress-end.png</righttexture>
+		</control>
+		<control type="progress" id="23">
+			<description>Progress Bar</description>
+			<width>100%</width>
+			<bottom>10</bottom>
+			<height>8</height>
+			<info>Player.Progress</info>
+			<visible>true</visible>
+		</control>
+	</include>
 	<include name="DefOSDButtons">
 		<aligny>center</aligny>
 		<align>center</align>
@@ -327,7 +411,7 @@
 			<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
 			<right>70</right>
 			<posy>70</posy>
-			<width>350</width>
+			<width>240</width>
 			<height>100</height>
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>
@@ -343,42 +427,23 @@
 			</control>
 			<control type="group">
 				<control type="image">
-					<left>0</left>
+					<left>20</left>
 					<centertop>50%</centertop>
-					<width>100</width>
-					<height>100</height>
-					<texture>osd/clock.png</texture>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<colordiffuse>$VAR[OSDPanelWhite70]</colordiffuse>
+					<texture>kaitoast/clock.png</texture>
 				</control>
 				<control type="label">
-					<left>80</left>
-					<height>100%</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>SmallBold</font>
-					<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-					<label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
-				</control>
-			</control>
-			<control type="group">
-				<control type="image">
-					<description>Finish time image</description>
-					<left>180</left>
-					<centertop>50%</centertop>
-					<width>100</width>
-					<height>100</height>
-					<texture>osd/clock-finish.png</texture>
-				</control>
-				<control type="label">
-					<description>Clock label</description>
-					<right>20</right>
+					<right>30</right>
 					<left>80</left>
 					<height>100%</height>
 					<align>right</align>
-					<label>$INFO[Player.FinishTime(hh:mm)]</label>
+					<aligny>center</aligny>
 					<font>SmallBold</font>
 					<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-					<align>right</align>
-					<aligny>center</aligny>
+					<label>$INFO[System.Time]</label>
 				</control>
 			</control>
 		</control>

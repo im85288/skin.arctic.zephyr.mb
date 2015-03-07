@@ -104,10 +104,10 @@
 			<scrollout>false</scrollout>
 			<align>center</align>
 			<pauseatend>5000</pauseatend>
-			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MediaBrowser.views.movies.all.total)][/COLOR] $LOCALIZE[342]</label>
+			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalMovies)][/COLOR] $LOCALIZE[342]</label>
 			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalWatchedMovies)][/COLOR] $LOCALIZE[16102] $LOCALIZE[342]</label>
 			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalUnWatchedMovies)][/COLOR] $LOCALIZE[16101] $LOCALIZE[342]</label>
-			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MediaBrowser.views.tvshows.all.total)][/COLOR] $LOCALIZE[20343]</label>
+			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalTvShows)][/COLOR] $LOCALIZE[20343]</label>
 			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalEpisodes)][/COLOR] $LOCALIZE[20360]</label>
 			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalWatchedEpisodes)][/COLOR] $LOCALIZE[16102] $LOCALIZE[20360]</label>
 			<label>[COLOR=Highlight]$INFO[Window(Home).Property(MB3TotalUnWatchedEpisodes)][/COLOR] $LOCALIZE[16101] $LOCALIZE[20360]</label>

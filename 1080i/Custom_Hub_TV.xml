@@ -74,7 +74,7 @@
                                 <texture background="true">$VAR[FanartImage]</texture>
                             </control>
                         </focusedlayout>
-                        <content target="video">$VAR[DefTVHubWidget]</content>
+                        <content>$VAR[DefTVHubWidget]</content>
                     </control>
                     <control type="group">
                         <left>10</left>
