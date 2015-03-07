@@ -411,7 +411,7 @@
 			<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
 			<right>70</right>
 			<posy>70</posy>
-			<width>240</width>
+			<width>350</width>
 			<height>100</height>
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>
@@ -427,23 +427,42 @@
 			</control>
 			<control type="group">
 				<control type="image">
-					<left>20</left>
+					<left>0</left>
 					<centertop>50%</centertop>
-					<width>48</width>
-					<height>48</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[OSDPanelWhite70]</colordiffuse>
-					<texture>kaitoast/clock.png</texture>
+					<width>100</width>
+					<height>100</height>
+					<texture>osd/clock.png</texture>
 				</control>
 				<control type="label">
-					<right>30</right>
 					<left>80</left>
 					<height>100%</height>
-					<align>right</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<font>SmallBold</font>
 					<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-					<label>$INFO[System.Time]</label>
+					<label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
+				</control>
+			</control>
+			<control type="group">
+				<control type="image">
+					<description>Finish time image</description>
+					<left>180</left>
+					<centertop>50%</centertop>
+					<width>100</width>
+					<height>100</height>
+					<texture>osd/clock-finish.png</texture>
+				</control>
+				<control type="label">
+					<description>Clock label</description>
+					<right>20</right>
+					<left>80</left>
+					<height>100%</height>
+					<align>right</align>
+					<label>$INFO[Player.FinishTime(hh:mm)]</label>
+					<font>SmallBold</font>
+					<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
 				</control>
 			</control>
 		</control>
