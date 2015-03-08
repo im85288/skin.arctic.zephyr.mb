@@ -18,6 +18,7 @@
             <onfocus condition="!Player.HasVideo + !IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(Home)</onfocus>
             <onfocus condition="IsEmpty(Skin.String(StartupPlaylist))">AlarmClock(GoHome,ReplaceWindow(home),00:01,silent,false)</onfocus>
             <onfocus condition="System.HasAddon(plugin.video.xbmb3c)">Skin.SetBool(videomodes.mediabrowser)</onfocus>
+            <onfocus condition="System.HasAddon(plugin.video.xbmb3c) + IsEmpty(Window(home).Property(SkinInitStarted))">XBMC.RunScript(plugin.video.xbmb3c,SETRECOMMENDEDMB3SETTINGS,ZEPHYR)</onfocus>
         </control>
         <control type="label">
             <description>Loading</description>
