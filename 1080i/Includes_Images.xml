@@ -82,7 +82,7 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="FanartImage">
-		<value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt)) + !Control.IsVisible(51)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+		<value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt)) + !Container.Content(episodes)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
 		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Container.Content(episodes)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
