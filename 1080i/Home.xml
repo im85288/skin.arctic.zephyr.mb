@@ -5,6 +5,7 @@
     <allowoverlay>no</allowoverlay>
     <!--<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;levels=0)</onload>-->
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|movieshub|episodeshub)</onload>
+    <onload>SetProperty(SkinIsCompatible,true)</onload>
     <controls>
         <include>GlobalBackground</include>
         <include>HomeHeader</include>
