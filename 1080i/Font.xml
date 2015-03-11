@@ -45,6 +45,11 @@
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>32</size>
         </font>
+		<font>
+			<name>font14</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>22</size>
+		</font>
         
       
         <font>
