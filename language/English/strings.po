@@ -491,3 +491,9 @@ msgstr ""
 msgctxt "#31219"
 msgid "Show reflections"
 msgstr ""
+
+msgctxt "#32001"
+msgid "Banner Plex"
+msgstr ""
+
+

@@ -8,5 +8,6 @@
 	<view id="Media info" value="56" />
 	<view id="Extra Info" value="57" />
 	<view id="Carded" value="58" />
+	<view id="Banner Plex" value="59" />
 	<view id="Thumbnail" value="500" />
 </views>
