@@ -282,6 +282,7 @@
 					<width>100%</width>
 					<height>50</height>
 					<font>Mini</font>
+					<scroll>true</scroll>
 					<textcolor>Black30</textcolor>
 					<label>$INFO[ListItem.FilenameAndPath]</label>
 					<aligny>center</aligny>
@@ -317,6 +318,7 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<onclick>$INFO[Window(home).Property("MB3.Action")]</onclick>
 				</control>
 				<!--<control type="button" id ="9"> <description>Resume</description> <label>13404</label> <width>450</width> <height>68</height> <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus> <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus> <include>DefDialogButtons</include>> </control> -->
 				<control type="button" id="53">
@@ -344,9 +346,10 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
-					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<onclick>$INFO[Window(home).Property("MB3.TrailerAction")]</onclick>
+					<visible>!IsEmpty(Window(home).Property("MB3.TrailerAction"))</visible>
 				</control>
-				<control type="button" id="49">
+			<!--  	<control type="button" id="49">
 					<description>Home Theatre</description>
 					<label>31170</label>
 					<width>450</width>
@@ -377,6 +380,7 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<visible>!Skin.HasSetting(global.kioskmode)</visible>
 				</control>
 				<control type="button" id="10">
 					<description>Get Thumb</description>
@@ -386,6 +390,7 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<visible>!Skin.HasSetting(global.kioskmode)</visible>
 				</control>
 				<control type="button" id="9001">
 					<label>$LOCALIZE[31203]</label>
@@ -398,8 +403,9 @@
 					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 					<texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
 					<include>DefDialogButtons</include>
+					<visible>!Skin.HasSetting(global.kioskmode)</visible>
 					<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
-				</control>
+				</control> -->
 			</control>
 			<control type="button" id="52">
 				<visible allowhiddenfocus="true">Control.IsVisible(50)</visible>

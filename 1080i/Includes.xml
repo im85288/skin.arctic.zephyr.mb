@@ -99,14 +99,14 @@
 
     <variable name="GlobalFanart">
         <value condition="Window.IsVisible(weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
-        <value condition="Window.IsVisible(home) + !IsEmpty(Container(301).ListItem.Art(fanart)) + !Skin.HasSetting(home.dontshowfanart)">$INFO[Container(301).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Container(301).ListItem.Art(fanart)) + [!Skin.HasSetting(home.dontshowfanart) | Control.HasFocus(301)]">$INFO[Container(301).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart)) + StringCompare(Container(300).ListItem.Property(widget),Weather) + !Skin.HasSetting(home.dontshowfanart)">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Property(Background))">$INFO[Container(300).ListItem.Property(Background)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.slideshowpath)) + [StringCompare(Container(300).ListItem.Property(widget),Weather) | IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating |  Skin.HasSetting(home.dontshowfanart)]">$INFO[Skin.String(home.slideshowpath)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart)) + Skin.HasSetting(home.showweatherfanart) + [IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating]">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating">pvr/background.jpg</value>
-        <value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt)) + !Control.IsVisible(51)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+        <value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
 		
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
@@ -128,7 +128,6 @@
             <visible>Skin.HasSetting(global.showvideo)</visible>
             <include>Dimensions_Fullscreen</include>
         </control>
-       
     </include>
     <include name="GlobalVisualisation">
         <control type="group">
